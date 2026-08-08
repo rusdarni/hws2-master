@@ -1,4 +1,4 @@
-import React, {ChangeEvent, KeyboardEvent, useRef, useState} from 'react'
+import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 import Greeting from './Greeting'
 import { UserType } from './HW3'
 
@@ -44,7 +44,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     const [error, setError] = useState<string>('') // need to fix any
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
-        setName(e.currentTarget.value) // need to fix
+        setName(e.target.value) // need to fix
 
         error && setError('')
     }
